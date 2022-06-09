@@ -22,7 +22,7 @@ async def on_message(message):
             ml = message.content.split(' ')
             word = random.choice(ml)
             data = await call_api(word)
-            base = data['list'][random.randint(0, len(data['list'])) - 1]
+            base = data['list'][random.randint(0, len(data['list']))]
             defenition = base["definition"]
             example = base["example"]
             for char in defenition:
